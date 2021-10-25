@@ -50,8 +50,31 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 void Ex3(int in_arr[], int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(in_arr,a,n,n);
-	//Your codes here
+	int i,j,k,t,h,e;
+	int temp;
+	for(j=0;j<n;++j){
+				for(k=j+1;k<=n-1;++k){
+					if(a[j][j]>a[k][k]){
+						temp=a[j][j];
+						a[j][j]=a[k][k];
+						a[k][k]=temp;
+					}
+				}
+	}
+	k=3;
+	e=n-1;
 	
+				for(e,i=0;e<0 || i<n-1;--e,++i){
+					
+					if(a[e][i]<a[e-1][i+1]){
+						temp=a[e-1][i+1];
+						a[e-1][i+1]=a[e][i];
+						a[e][i]=temp;
+					}
+					
+					}
+
+							
 	printArray(a,n,n);
 }
 
