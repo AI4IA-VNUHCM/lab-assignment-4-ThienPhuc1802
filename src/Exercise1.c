@@ -16,7 +16,19 @@ ______________________________________
 #include <math.h>
 
 void Ex1(int n){
-	//Your codes here
+	int i,j,k;
+
+	for (i=1;i<=n+1;++i){
+		printf("\n");
+		for(j=1; j<=i;++j){
+			if (j==1 || j==i){
+				printf("1 ");
+			}
+			else{
+				printf("%d ",i-1);
+			}
+		}
+	}
     
 }
 
