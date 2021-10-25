@@ -49,6 +49,12 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 
 void insertRow(int arr[], int a[SIZE][SIZE],int rowIndex, int m, int n){
 	//Your codes here
+	int i,j,k;
+	printf("%d ",rowIndex);
+	/*for (i=m;i<rowIndex;++i){
+		a[i][n]=
+	}*/
+	
 	
 }
 
