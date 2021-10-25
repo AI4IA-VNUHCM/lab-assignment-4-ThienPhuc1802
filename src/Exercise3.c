@@ -63,15 +63,16 @@ void Ex3(int in_arr[], int n){
 	}
 	k=3;
 	e=n-1;
-	
-				for(e,i=0;e<0 || i<n-1;--e,++i){
+	         
+
+				for(e=n-1,i=0;e<0 || i<n-1;--e,++i){
 					
 					if(a[e][i]<a[e-1][i+1]){
 						temp=a[e-1][i+1];
 						a[e-1][i+1]=a[e][i];
 						a[e][i]=temp;
 					}
-					
+				
 					}
 
 							
