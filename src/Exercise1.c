@@ -16,8 +16,31 @@ ______________________________________
 #include <math.h>
 
 void Ex1(int n){
-	//Your codes here
-    
+	int i,j,k;
+	n=n+1;
+	int arr[n][n+1];
+    arr[0][0]=1;
+	for (i=0;i<n;i++){
+		for (j=0;j<=i;++j){
+			if (j==0 || j==i){
+				arr[i][j]=1;
+			}
+		}
+	}
+
+	for(i=2;i<n;i++){
+		for(j=1;j<i;++j){
+		arr[i][j]=arr[i-1][j]+arr[i-1][j-1];
+        }
+	}	 
+
+
+    for(i=0;i<n;i++){
+		printf("\n");
+		for(j=0;j<=i;++j){
+			printf("%d ",arr[i][j]);
+		}
+}
 }
 
 int main(int argc, char *argv[]) {

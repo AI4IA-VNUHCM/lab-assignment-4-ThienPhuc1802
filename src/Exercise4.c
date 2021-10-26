@@ -49,21 +49,55 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 
 void insertRow(int arr[], int a[SIZE][SIZE],int rowIndex, int m, int n){
 	//Your codes here
+	int i,j,k;
+	for (i=m;i>=rowIndex;--i){
+		for(j=0;j<n;++j){
+			a[i][j]=a[i-1][j];
+		}
+	} 
+	for (j=0;j<=n-1;++j){
+		a[rowIndex][j]=arr[j];
+	}
+	printArray(a,m+1,n);
+	
+
+	
+	
 	
 }
 
 void removeRow(int a[SIZE][SIZE], int rowIndex, int m, int n){
-	//Your codes here
-	
+	int i,j,k;
+	for (i=rowIndex;i<=m-1;i++){
+		for(j=0;j<n;j++){
+			a[i][j]=a[i+1][j];
+		}
+	}
+	printArray(a,m-1,n);
 }
 
 void insertCol(int arr[], int a[SIZE][SIZE],int colIndex, int m, int n){
-	//Your codes here
-	
+	int i,j,k;
+	for(i=n;i>colIndex;--i){
+		for (j=0;j<m;++j){
+			a[j][i]=a[j][i-1];
+		}
+	}
+	for (i=0;i<m;++i){
+		a[i][colIndex]=arr[i];
+	}
+	printArray(a,m,n+1);
 }
 
 void removeCol(int a[SIZE][SIZE], int colIndex, int m, int n){
 	//Your codes here
+	int i,j,k;
+	for(i=colIndex;i<=n-1;++i){
+		for(j=0;j<=m-1;++j){
+			a[j][i]=a[j][i+1];
+		}
+	}
+	printArray(a,m,n-1);
 	
 }
 
