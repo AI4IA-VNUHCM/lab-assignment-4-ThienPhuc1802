@@ -70,7 +70,7 @@ void removeRow(int a[SIZE][SIZE], int rowIndex, int m, int n){
 	int i,j,k;
 	for (i=rowIndex;i<=m-1;i++){
 		for(j=0;j<n;j++){
-			a[i][j]=a[i+1][k];
+			a[i][j]=a[i+1][j];
 		}
 	}
 	printArray(a,m-1,n);
@@ -86,7 +86,7 @@ void insertCol(int arr[], int a[SIZE][SIZE],int colIndex, int m, int n){
 	for (i=0;i<m;++i){
 		a[i][colIndex]=arr[i];
 	}
-	printArray(a,m,n);
+	printArray(a,n,m);
 }
 
 void removeCol(int a[SIZE][SIZE], int colIndex, int m, int n){
